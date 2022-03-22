@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+/*
+     if语句 满足条件执行if 不满足执行else 
+
+*/
+     var year = 2088
+     if(year%4===0 && year%100 !== 0 || year%400===0){
+         console.log(year +'是闰年')
+        
+     }else{
+         console.log(year +'不是闰年')
+     }
+///////////////////
+        /*
+            switch语句 根据已知条件去找
+            case 匹配条件
+            break 关键字  跳出循环
+            default 不匹配执行这个
+         */
+        var year = 2022
+        var month = 12
+        var day = 12
+        var total = 0
+         
+        switch(month) {
+            case 12: total +=30;
+            case 11: total +=31;
+            case 10: total +=30;
+            case 9: total +=31;
+            case 8: total +=31;
+            case 7: total +=30;
+            case 6: total +=31;
+            case 5: total +=30;
+            case 4: total +=31;
+            case 3:
+                if(
+                    year%4===0 && year%100 !== 0 || year%400===0
+                ){total +=29} 
+                else{total +=28};
+            case 2: total +=31;
+        }
+        total += day
+       alert('2022年12月12日是第'+total+'天')
+
+    </script>
+</body>
+</html>

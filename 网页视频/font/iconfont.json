@@ -1,0 +1,44 @@
+{
+  "id": "3243398",
+  "name": "视频矢量图标",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "2674483",
+      "name": "暂停",
+      "font_class": "zanting",
+      "unicode": "e629",
+      "unicode_decimal": 58921
+    },
+    {
+      "icon_id": "2076208",
+      "name": "快退",
+      "font_class": "kuaitui",
+      "unicode": "e878",
+      "unicode_decimal": 59512
+    },
+    {
+      "icon_id": "2076210",
+      "name": "快进",
+      "font_class": "kuaijin",
+      "unicode": "e879",
+      "unicode_decimal": 59513
+    },
+    {
+      "icon_id": "2076215",
+      "name": "音量",
+      "font_class": "yinliang",
+      "unicode": "e87a",
+      "unicode_decimal": 59514
+    },
+    {
+      "icon_id": "2674474",
+      "name": "播放",
+      "font_class": "bofang",
+      "unicode": "e624",
+      "unicode_decimal": 58916
+    }
+  ]
+}

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/fonts.css">
+    <style>
+        *{
+            padding:0;
+            margin:0;
+        }
+        video::-webkit-media-controls{ 
+
+              display:none !important;
+
+            }
+        #overview{
+            height:430px;
+            width:600px;
+            background-image: linear-gradient(to right top, #daaee1, #acbeff, #50d2ff, #00e1f7, #0ee8c1);            margin:0 auto;
+            position: relative;
+            border-radius: 4%;
+        }
+        #video{
+           position: absolute;
+           left: 50px;
+           top: -90px;
+        }
+        .iconfont{
+            background-color: rgba(255, 255, 255, 0);
+            border:none;
+            font-size:40px;
+            position: absolute;
+        }
+        .xs{
+            top: 367px;
+            left: 280px;
+        }
+        .kt{
+            top: 367px;
+            left: 160px;
+        }
+        
+        .kj{
+            top: 367px;
+            right: 160px;
+        }
+        
+        .yl{
+            top: 367px;
+            right: 50px;
+        }
+        .zt{
+            display: none;
+        }
+        .bf{
+            display: none;
+        }
+        #progress{
+            position: absolute;
+            top: 300px;
+            left: 50px;
+            width: 500px;
+            height:50px
+        }
+        button:hover{
+            border: 1px solid;
+            border-radius:5%
+        }
+    </style>
+</head>
+<body>
+  <div id="overview"> 
+    <video id="video" src="./你的名字.mp4"  height="500px" width="500px"></video>
+    <button class="iconfont xs">&#xe624;</button> 
+    <button class="iconfont zt">&#xe629;</button>
+    <button class="iconfont kt">&#xe878;</button>
+    <button class="iconfont kj">&#xe879;</button>
+    <button class="iconfont yl">&#xe87a;</button>
+    <input id="progress" type="range">
+  </div>
+    <script>
+      let btn = document.querySelectorAll("button");
+      let video =document.querySelector("video");
+      let progress= document.getElementById("progress");
+         video.onplay = function(){
+            progress.value=video.currentTime/video.duration*100 
+         }
+         video.onpause=function(){}
+       btn[0].onclick = function(){
+           video.play();
+           btn[0].className = "iconfont bf";
+           btn[1].className = "iconfont xs"
+       }
+       btn[1].onclick = function(){
+           video.pause();
+           btn[1].className = "iconfont zt";
+           btn[0].className = "iconfont xs";
+       }
+       btn[2].onclick = function(){
+         video.currentTime=video.currentTime-3
+       }
+       btn[3].onclick = function(){
+         video.currentTime=video.currentTime+3
+       }
+       btn[4].onclick = function(){
+      video.muted=!video.muted
+    }
+    video
+    
+       
+     
+    
+    </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            width: 60px;
+            height: 60px;
+            position: fixed;
+            top: 0;
+            left: 0;
+
+        }
+    </style>
+</head>
+<body>
+    
+
+     <img src="星星.jpg" alt="">
+      
+     <script>
+      
+      //获取图片
+      var img = document.querySelector("img")
+
+      //设置窗口鼠标跟随事件
+      document.onmousemove = function(s){
+          var x = s.clientX
+          var y = s.clientY
+
+          img.style.left = x + 5+ "px"
+          img.style.top = y + 5+ "px" 
+      }
+
+
+
+     </script>
+
+</body>
+</html>

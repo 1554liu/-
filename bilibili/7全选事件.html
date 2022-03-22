@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0
+        }
+        div{
+            width: 120px;
+            height: 145px;
+            border: 1px solid #000;
+            border-radius: 10px;
+            text-align: center;
+            margin:30px auto;
+        }
+        hr{
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="box">
+        全选：<input type="checkbox"><br>
+        <hr>
+        <input type="checkbox"> 选项一 <br>
+        <input type="checkbox"> 选项二 <br>
+        <input type="checkbox"> 选项三 <br>
+        <input type="checkbox"> 选项四 <br>
+    </div>
+
+
+  
+    <script>
+        
+        var allbtn = document.querySelector('input')
+        var items = document.querySelectorAll('input:nth-child(n+2)')
+      /*  console.log(allbtn)
+        console.log(items)*/
+         //绑定点击事件
+         allbtn.onclick = function(){
+             var type = allbtn.checked
+             //遍历把每一个选项选中
+             for( var i = 0; i < items.length; i++){
+                 items[i].checked = type
+             }
+         }
+         for( var i = 0; i < items.length; i++){
+             items[i].onclick = function(){
+                 var le = true
+                 for( var j= 0; j < items.length; j++){
+                     if(items[j].checked === false){
+                         le = false
+                         break
+                     }
+                 }
+                allbtn.checked = le
+             }
+         }
+        
+
+        
+
+    </script>
+      
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            text-align: center;
+            
+            color: #0a0;
+            background-color: skyblue;
+            margin: 50px auto;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        哈哈
+    </div>
+    
+        <script>
+            /*
+               事件绑定三要素
+               事件源
+               事件类型
+               事件处理函数
+               语法：事件源.on事件类型=事件处理函数
+            */
+           var div = document.querySelector('div')
+         
+           div.onmouseover = function(){
+               alert('nihao')
+               console.log()
+           }
+           /*
+           事件对象  
+           获取方法直接接收形参
+           
+           */
+        </script>
+
+</body>
+</html>

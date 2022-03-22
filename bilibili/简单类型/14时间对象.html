@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+    
+      var time = new Date();
+      alert(time)
+      //获取时间对象中的年份信息 getFullYear()
+      var year = time.getFullYear()
+      alert(year)
+      //获取时间对象中的月份信息 getMonth()
+      var Month = time.getMonth()
+      alert(Month)
+       //获取时间对象中的日期信息 getDate()
+       var date = time.getDate()
+      alert(date)
+      //获取时间对象中的小时信息 getHours()
+      var Hours = time.getHours()
+      alert(Hours)
+       //获取时间对象中的分钟信息 getMinutes()
+       var Minutes = time.getMinutes()
+      alert(Minutes)
+        //获取时间对象中的秒钟信息 getSeconds()
+        var Seconds = time.getSeconds()
+      alert(Seconds)
+      //获取时间对象中的星期几信息 getDay()
+      var Day = time.getDay()
+      alert('今天是星期'+Day)
+       //获取格林威治时间 getTime()
+       var ms = time.getTime()
+      alert('距离格林威治时间已经过去了'+ms+'毫秒')
+      //设置时间只需要把get改成set加参数
+    </script>
+</body>
+</html>
